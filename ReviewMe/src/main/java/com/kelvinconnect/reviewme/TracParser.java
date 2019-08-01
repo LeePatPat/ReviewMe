@@ -1,4 +1,4 @@
-package reviewme;
+package com.kelvinconnect.reviewme;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,14 +12,9 @@ import org.jsoup.select.Elements;
  * Parses HTML and returns the tickets in review
  */
 public class TracParser {
-    Document document;
     
-    public TracParser(Document html){
-        this.document = html;
-        this.parse(document);
-    }
     
-    private List<Ticket> parse(Document doc){
+    public List<Ticket> parse(Document document){
         Elements tableHeaderElements = document.getElementsByClass("report-result");
         Element reviewTableHeaderElement = this.getReviewElement(tableHeaderElements);
         

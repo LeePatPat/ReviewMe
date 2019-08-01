@@ -1,4 +1,4 @@
-package reviewme;
+package com.kelvinconnect.reviewme;
 
 /**
  * Ticket object to represent a Trac ticket

@@ -1,12 +1,11 @@
-package com.kelvinconnect.reviewme;
+package com.kelvinconnect.reviewme.watcher;
 
 import java.io.IOException;
 import java.net.URL;
-import java.net.URI;
 
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
-import org.jsoup.helper.Validate;
+//import org.jsoup.helper.Validate;
 
 /**
  * App to keep an eye on tickets that have been in review too long in a given milestone
@@ -16,10 +15,13 @@ import org.jsoup.helper.Validate;
  * 
  * @author Lee Paterson
  */
-public class ReviewMe {
+public class Main {
 
     public static void main(String[] args) {
-        Validate.isFalse(args.length == 1, "Usage: supply milestone URL (no other GET parameters other than 'milestone')");
+        if(args.length != 1){
+            System.out.println("Usage: supply milestone URL (no other GET parameters other than 'milestone')");
+            System.exit(1);
+        }
         
         //main parameter assumed: trac.pronto.pri/KC/query?milestone=NAME+%20+HERE
         

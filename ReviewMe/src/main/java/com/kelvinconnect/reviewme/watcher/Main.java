@@ -1,5 +1,6 @@
 package com.kelvinconnect.reviewme.watcher;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 
@@ -35,7 +36,12 @@ public class Main {
             System.out.println("ERROR: Link given is not valid URL syntax.");
             System.out.println("The only GET parameter should be 'milestone'");
             System.out.println("Expected format for user input: trac.pronto.pri/KC/query?milestone=NAME+%20+HERE");
+        } catch (FileNotFoundException e) {
+            System.out.println("Cannot find config.properties or emails.config file.");
+            System.out.println("Refer to the README.md file on how to format these.");
         } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

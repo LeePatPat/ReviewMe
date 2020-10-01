@@ -12,3 +12,7 @@ This project uses Maven as a way handling its dependency to any required librari
 Installing Maven can be seen [here](https://www.mkyong.com/maven/how-to-install-maven-in-windows/).
 
 Installing dependencies, building, compiling and packaging using Maven can be seen [here](https://www.logicbig.com/tutorials/build-tools/apache-maven/playing-with-maven-commands.html).
+
+----
+# Contribution Guide
+//TODO

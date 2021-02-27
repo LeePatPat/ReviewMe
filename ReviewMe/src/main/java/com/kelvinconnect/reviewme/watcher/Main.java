@@ -24,7 +24,7 @@ public class Main {
             System.exit(1);
         }
         
-        //main parameter assumed: trac.pronto.pri/KC/query?milestone=NAME+%20+HERE
+        //main parameter assumed: trac/KC/query?milestone=NAME+%20+HERE
         
         String milestoneLink = args[0];
         try {
